@@ -8,8 +8,11 @@ const { authMiddleware } = require("../middleware/authmiddleware");
 // membuat akun baru
 router.post("/register", userController.registerUser);
 
-// mendapatkan semua database
+// mendapatkan semua user database
 router.get("/data", userController.getalldata);
+
+// mendapatkan semua photo database
+router.get("/data/photo", userController.getallphoto);
 
 // menghapus akun yang sudah terbuat
 router.delete("/delete-account", authMiddleware, userController.deleteUser);

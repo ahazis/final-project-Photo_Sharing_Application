@@ -92,6 +92,23 @@ const getalldata = (req, res) => {
   });
 };
 
+// mendapatkan semua photo dari database
+const getallphoto = (req, res) => {
+  pool.getConnection((err, conn) => {
+    if (err) {
+      throw err;
+    }
+
+    conn.query("SELECT * FROM photo", (err, result) => {
+      if (err) {
+        throw err;
+      }
+      conn.release();
+
+      res.json({ code: 200, message: "semua photo berhasil ditemukan", data: result });
+    });
+  });
+};
 
 // menghapus akun yang sudah terbuat
 const deleteUser = (req, res) => {
@@ -501,6 +518,7 @@ module.exports = {
   authMiddleware,
   registerUser,
   getalldata,
+  getallphoto,
   deleteUser,
   postphoto,
   edittitle,
