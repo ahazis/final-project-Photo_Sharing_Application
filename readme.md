@@ -52,6 +52,7 @@ http://localhost:5000
 | :-------- | :------- | :------------------------- |
 | `post` | `user/register` | membuat akun |
 | `get` | `user/data` | mendapatkan semua data akun yang terdaftar |
+| `get` | `user/data/photo` | mendapatkan semua photo pada akun |
 | `delete` | `user/delete-account` | menghapus akun yang sudah terbuat |
 | `post` | `user/photo` | post photo |
 | `put` | `user/photo/:id` | mengubah title dan description pada photo |
