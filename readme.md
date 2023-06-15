@@ -44,7 +44,10 @@ http://localhost:5000
     "express": "^4.18.2",
     "mysql2": "^3.3.0",
     "nodemon": "^2.0.22"
-  
+
+## API DOCUMENTATION
+https://documenter.getpostman.com/view/26305746/2s93mBxJxg
+
 ## API Endpoint
 
 
